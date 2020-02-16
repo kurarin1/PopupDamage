@@ -1,0 +1,5 @@
+name: PopupDamage
+main: com.kuraserver.popupdamage.Main
+version: 0.0.1
+author: kurarin
+api: ["1.0.0"]
