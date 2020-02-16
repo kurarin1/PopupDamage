@@ -34,7 +34,7 @@ public class Main extends PluginBase implements Listener {
         apk.entityRuntimeId = eid;
         apk.id = "minecraft:item";
         apk.x = (float) event.getEntity().x;
-        apk.y = (float) event.getEntity().y;
+        apk.y = (float) event.getEntity().y + event.getEntity().getEyeHeight();
         apk.z = (float) event.getEntity().z;
         apk.speedX = (1 - new Random().nextInt(2)) * 0.04f;
         apk.speedY = 0.21f;
@@ -60,7 +60,7 @@ public class Main extends PluginBase implements Listener {
 
                 targets.forEach((key, player) -> {if(player.isOnline()) player.dataPacket(rpk);});
             }
-        }.runTaskLater(this, 20);
+        }.runTaskLater(this, 12);
     }
 
 }
